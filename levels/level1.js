@@ -1,7 +1,7 @@
 let level1;
 
 function initLevel1() {
-    level1 = new level1(
+    level1 = new Level(
         [
             new BackgroundObject('img/background/layers/1.png', 0),
             new BackgroundObject('img/background/layers/2.png', 0),

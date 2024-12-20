@@ -1,4 +1,4 @@
-class BackgroundObject {
+class BackgroundObject extends DrawableObject {
     height = 480;
     width = 720;
     x = 0;
@@ -6,8 +6,10 @@ class BackgroundObject {
     imageCache = {};
 
     constructor(imagePath, x) {
-        super().loadImage(imagePath);
+        super();
         this.x = x;
+        this.loadImage(imagePath);
+
     }
 
 }

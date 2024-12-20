@@ -9,5 +9,37 @@ class DrawableObject{
     img;
     currentImage = 0;
     imageCache = {};
-    constructor(){}
+
+      /**
+   * Draws the drawable object on the canvas context.
+   * @param {CanvasRenderingContext2D} ctx - The canvas rendering context.
+   */
+  draw(ctx) {
+    try {
+      ctx.drawImage(this.img, this.x, this.y, this.width, this.height);
+    } catch (e) {
+      // Handle drawing errors if necessary
+    }
+  }
+
+  /**
+   * Loads an image from the given path.
+   * @param {string} path - The path to the image.
+   */
+  loadImage(path) {
+    this.img = new Image();
+    this.img.src = path;
+  }
+
+  /**
+   * Loads an array of images and caches them.
+   * @param {string[]} arr - Array of image paths.
+   */
+  loadImages(arr) {
+    arr.forEach((path) => {
+      let img = new Image();
+      img.src = path;
+      this.imageCache[path] = img;
+    });
+  }
 }

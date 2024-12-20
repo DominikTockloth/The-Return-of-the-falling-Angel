@@ -6,13 +6,17 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>The Return of the falling Angel</title>
     <link rel="stylesheet" href="style.css">
-    <script src="models/keyboard.class.js"></script>
+    <script src="models/drawableObject.js" defer></script>
+    <script src="models/backgroundObject.js" defer></script>
+
+    <script src="models/keyboard.class.js" defer></script>
     <script src="models/level.class.js"></script>
-    <script src="models/backgroundObject.js"></script>
+
     <script src="levels/level1.js"></script>
+    <script src="models/world.class.js" defer></script>
 </head>
 
-<body onload="initLevel1()">
+<body>
     <section class="main">
         <div class="canvas-container">
             <canvas id="canvas" width="720" height="480"></canvas>
